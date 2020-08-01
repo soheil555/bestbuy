@@ -8,8 +8,7 @@ class Product(models.Model):
     price           = models.DecimalField(decimal_places=2,max_digits=5)
 
     #TODO: implement images and slug fields
-
-    #images          = models.ImageField()
+    images          = models.ImageField(upload_to='photos/',null=True,blank=True)
     #slug            = models.SlugField()
 
     def __str__(self):
