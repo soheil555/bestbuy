@@ -3,6 +3,8 @@ from django.db.models import Q
 from django.dispatch import receiver
 from django.db.models.signals import pre_save
 
+from .utils import create_slug
+
 # Create your models here.
 class ProductQuerySet(models.QuerySet):
     def search(self,name):
@@ -27,7 +29,7 @@ class Product(models.Model):
     detail          = models.TextField()
     price           = models.DecimalField(decimal_places=2,max_digits=5)
     image           = models.ImageField(upload_to='photos/',null=True,blank=True)
-    slug            = models.SlugField(null=True)
+    slug            = models.SlugField(null=True,blank=True,unique=True)
 
 
     objects = ProductManager()
@@ -38,5 +40,6 @@ class Product(models.Model):
 
 
 @receiver(pre_save,sender=Product)
-def set_slug_before_create_product(sender,instance,created,**kwargs):
-    pass
+def set_slug_before_create_product(sender,instance,**kwargs):
+    if not instance.slug:
+        instance.slug = create_slug(instance)

@@ -14,9 +14,9 @@ def products_list_view(request):
 
 
 @api_view(['GET'])
-def product_detail_view(request,id):
+def product_detail_view(request,slug):
     try:
-        obj = Product.objects.get(id=id)
+        obj = Product.objects.get(slug=slug)
     except:
         return Response({},status=404)
 
