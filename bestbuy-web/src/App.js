@@ -1,11 +1,15 @@
 import React from 'react';
-
+import Navbar from './components/Navbar'
+import Intro from './components/Intro'
+import ListView from './components/ListView'
 
 function App() {
   return (
   <React.Fragment>
-
-    <h1>Hello World.</h1>
+    
+    <Navbar/>
+    <Intro/>
+    <ListView/>
 
   </React.Fragment>
   );
