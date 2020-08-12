@@ -1,14 +1,17 @@
 function backendLookup(url,method,responseHandler){
 
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
+    xhr.onload = function(){
 
-            responseHandler(this.status,this.response);
+            responseHandler(xhr.status,xhr.response);
 
     }
 
 
-    xhr.open(method,`http://127.0.0.1:8000/${url}`)
+    xhr.open(method,`http://127.0.0.1:8000/${url}`,true);
+
+    xhr.responseType = 'json';
+
     xhr.send();
 
 }

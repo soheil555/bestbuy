@@ -24,28 +24,28 @@ function Navbar(){
         <div className="row down-header">
             <div className="col-12">
             
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">BestBuy.</a>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <a className="navbar-brand" href="#">BestBuy.</a>
                 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">shop</a>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">shop</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">my boyfriends back</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">my boyfriends back</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">staff edit</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">staff edit</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">contact</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">cart</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">cart</a>
                         </li>
                         </ul>
                     </div>

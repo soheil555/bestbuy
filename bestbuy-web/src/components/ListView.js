@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Product from './Product'
 import {productsListView} from './lookups'
-
+import './css/list-view.css'
 
 function ListView(){
 
@@ -11,18 +11,16 @@ function ListView(){
 
     useEffect(()=>{
 
-        if(isProductsSet == false){
+        if(isProductsSet === false){
 
             const responseHandler = function(status,response){
 
-                if(status == 200){
-    
-                    
+                if(status === 200){
+
                     setProducts(response);
     
                 }
                 else{
-                    console.log(response);
                     alert("Some problem getting products,Try again later.");
                 }
     
@@ -39,11 +37,25 @@ function ListView(){
     },[isProductsSet,setIsProductsSet]);
 
 
-    return products.map(function(product,index){
+    return <React.Fragment> 
+        <h1 className="products-header">
+            
+            Products
 
-       return <Product product={product} />
+        </h1>
 
-    });
+        <div className="row products">
+        
+            { products.map((product,index) => {
+
+                    return <div className="col-lg-4">
+                         <Product key={index} product={product} />
+                    </div>
+                }) }
+        
+        </div>
+
+        </React.Fragment>
     
 
 

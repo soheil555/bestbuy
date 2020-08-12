@@ -1,0 +1,23 @@
+.products{
+ margin-top:20px;
+}
+
+.card{
+
+    margin-bottom: 20px;
+
+}
+
+.card-img-top{
+
+    height: 15rem;
+
+}
+
+.products-header{
+
+    margin-top: 40px;
+    text-align: center;
+    font-size: 3em;
+
+}
