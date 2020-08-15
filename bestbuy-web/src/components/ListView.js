@@ -9,6 +9,8 @@ function ListView(){
     const [products,setProducts] = useState([]);
 
 
+    const search = document.location.search;
+
     useEffect(()=>{
 
 
@@ -26,7 +28,7 @@ function ListView(){
     
             }
 
-            productsListView(responseHandler);
+            productsListView(responseHandler,search);
 
 
     },[]);
