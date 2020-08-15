@@ -1,8 +1,9 @@
 import React from 'react'
 import zayn1 from './images/zayn1.jpg'
-import './css/intro-image.css'
+import './css/home.css'
+import ListView from './ListView'
 
-function Intro(){
+function Home(){
 
 
 return (
@@ -18,13 +19,21 @@ return (
 
             </div>
 
-
         </div>
         
+        <div className="row">
+            <div className="col-12 text-center mt-2">
+
+                <h1> Last Products </h1>
+            
+            </div>
+            </div>
+
+        <ListView />
 
     </React.Fragment>
 );
 
 }
 
-export default Intro;
+export default Home;

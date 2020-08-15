@@ -1,17 +1,22 @@
 import React from 'react';
 import Navbar from './components/Navbar'
-import Intro from './components/Intro'
-import ListView from './components/ListView'
+import Home from './components/Home'
+import Shop from './components/Shop'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 
 function App() {
   return (
-  <React.Fragment>
-    
-    <Navbar/>
-    <Intro/>
-    <ListView/>
+      <Router>
+          <React.Fragment>
+              <Navbar />
+              <Switch>
 
-  </React.Fragment>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/shop" component={Shop} />
+
+              </Switch>
+          </React.Fragment>
+      </Router>
   );
 }
 
