@@ -61,3 +61,7 @@ body{
     left:0;
     z-index: 5000;
 }
+
+.form-inline{
+    margin-left:10px;
+}

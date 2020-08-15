@@ -23,8 +23,8 @@ function Navbar(){
 
         <div className="row down-header">
             <div className="col-12">
-            
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+
                 <a className="navbar-brand" href="#">BestBuy.</a>
                 
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +48,12 @@ function Navbar(){
                             <a className="nav-link" href="#">cart</a>
                         </li>
                         </ul>
+
+                        <form className="form-inline">
+                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button className="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
                     </div>
             </nav>
 

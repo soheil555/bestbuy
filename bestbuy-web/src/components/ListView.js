@@ -7,11 +7,10 @@ function ListView(){
 
 
     const [products,setProducts] = useState([]);
-    const [isProductsSet,setIsProductsSet] = useState(false);
+
 
     useEffect(()=>{
 
-        if(isProductsSet === false){
 
             const responseHandler = function(status,response){
 
@@ -28,21 +27,27 @@ function ListView(){
             }
 
             productsListView(responseHandler);
-            setIsProductsSet(true);
-
-        }
 
 
 
-    },[isProductsSet,setIsProductsSet]);
+
+    },[]);
 
 
     return <React.Fragment> 
+
+        <div className="row">
+
+        <div className="col-12">
+
         <h1 className="products-header">
             
             Products
 
         </h1>
+        </div>
+        </div>
+
 
         <div className="row products">
         

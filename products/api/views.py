@@ -9,6 +9,10 @@ from .serializers import ProductSerializer
 @api_view(['GET'])
 def products_list_view(request):
     qs = Product.objects.all()
+    s = request.GET.get("s",None)
+    if s is not None:
+        qs = qs.search(s)
+
     serializer = ProductSerializer(qs,many=True)
     return Response(serializer.data,status=200)
 
