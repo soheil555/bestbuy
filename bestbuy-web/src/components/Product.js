@@ -17,7 +17,7 @@ function Product(props){
             <p className="card-text">{product.detail}<br/>
                     {product.price} $
                 </p>
-            { props.detail ? null : <a href={product.slug} className="btn btn-primary">View Detail</a> }
+            { props.detail ? null : <a href={"/shop/"+product.slug} className="btn btn-primary">View Detail</a> }
         </div>
             </div>);
 

@@ -31,8 +31,6 @@ function ProductDetail(props){
 
     },[]);
 
-
-
     return <React.Fragment> <div className="row">
 
         <div className="col-6">

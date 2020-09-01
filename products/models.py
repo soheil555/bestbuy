@@ -11,7 +11,8 @@ class ProductQuerySet(models.QuerySet):
         return self.filter( 
             (
             Q(title__icontains=name)|
-            Q(detail__icontains=name)
+            Q(detail__icontains=name)|
+            Q(tag__title__icontains=name)
             )
 
         ).distinct()
