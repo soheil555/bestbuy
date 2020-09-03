@@ -2,12 +2,10 @@
 <html lang="en"><head>
     
     {% include 'top.html' %}
-
-    <title>BestBuy</title>
     
     <body>
         <div class="container-fluid">
-            <div id="root"></div>
+            <div id="root" data-cart-id={{cart_id}}></div>
         </div>
         
       {% include 'bottom.html' %}
