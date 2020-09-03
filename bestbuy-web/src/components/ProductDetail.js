@@ -8,6 +8,7 @@ function ProductDetail(props){
 
     const [product,setProduct] = useState({});
 
+
     useEffect( () => {
 
         const responseHandler = (status,response) => {

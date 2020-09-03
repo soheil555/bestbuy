@@ -26,7 +26,7 @@ export function productsListView(responseHandler,q=""){
 
 export function productDetailView(responseHandler,slug=""){
 
-    backendLookup(`api/products/detail/${slug}`,"GET",responseHandler);
+    backendLookup(`api/products/detail/${slug}/`,"GET",responseHandler);
 
 
 }

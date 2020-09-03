@@ -1,6 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.http import Http404
 
 from ..models import Product
 from .serializers import ProductSerializer
@@ -26,3 +26,7 @@ def product_detail_view(request,slug):
 
     serializer = ProductSerializer(obj)
     return Response(serializer.data,status=200)
+
+
+def not_found_view(request,path):
+    raise Http404()
