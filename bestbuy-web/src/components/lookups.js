@@ -30,3 +30,9 @@ export function productDetailView(responseHandler,slug=""){
 
 
 }
+
+export function CartListView(responseHandler){
+
+    backendLookup(`api/cart/list/`,"GET",responseHandler);
+
+}
