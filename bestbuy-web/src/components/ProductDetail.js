@@ -15,7 +15,8 @@ function ProductDetail(props){
 
             if(status === 404){
 
-                console.log("Not found");
+                alert("Not Found.");
+
 
             }
             else if(status === 200){

@@ -1,0 +1,82 @@
+*{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    background: linear-gradient(45deg,#d6e0f0,#f1f3f8);
+    height: 100vh;
+
+}
+
+#container{
+
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('http://127.0.0.1:8000/static/media/p404.png'),#393b44;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ 
+
+}
+
+
+#container .content{
+
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#container .content h2{
+
+    font-size: 18vw;
+    color:#fff;
+    line-height: 1em;
+
+}
+
+#container .content h4{
+
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #111;
+    background: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+
+}
+
+#container .content p{
+
+    color:#fff;
+    font-size: 1.2em;
+
+}
+
+#container .content a{
+
+          position: relative;
+          display: inline-block;
+          padding: 10px 25px;
+          background: #ff0562;
+          color:#fff;
+          text-decoration: none;
+          margin-top: 10px;
+          border-radius: 25px;
+          border-bottom: 4px solid #d00d56;
+
+
+}
+

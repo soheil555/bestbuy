@@ -25,6 +25,7 @@ from .views import home_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/products/',include('products.api.urls')),
+    path('api/cart/',include('cart.api.urls')),
 ]
 
 
