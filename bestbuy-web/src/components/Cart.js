@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {CartListView} from './lookups'
 import CartItem from './CartItem.js'
+import {CartItemUpdateView} from './lookups'
 
 function Cart(props){
 
@@ -8,6 +9,36 @@ function Cart(props){
 
     const {cartId} = props.data;
 
+
+
+    const removeHandler = (product) =>{
+
+        
+        const responseHandler = (status,response) => {
+
+
+            if(status === 200){
+
+
+            const newCartItems = cartItems.filter(function(obj){
+
+                    return obj.id !== product.id
+            });
+    
+            setCartItems(newCartItems);
+    
+
+
+            }
+            
+        };
+
+   
+
+
+        CartItemUpdateView(responseHandler,product.id);
+
+    }
 
     useEffect(() => {
 
@@ -37,7 +68,7 @@ function Cart(props){
             <ul class="list-group">
                     {cartItems.map((product,index) => {
 
-                        return <CartItem id={index} product={product} />
+                        return <CartItem id={index} product={product} cartRemoveHandler={removeHandler} />
 
                     })}
             </ul>

@@ -25,10 +25,12 @@ def update_cart_view(request):
         product = Product.objects.get(id=product_id)
         if product in cart_obj.products.all():
             cart_obj.products.remove(product)
+            action = "remove"
         else:
             cart_obj.products.add(product)
+            action = "add"
 
-        return Response({"done":"ok"},status=200)
+        return Response({"action":action},status=200)
     except Exception as e:
         print(e)
         return Response({},status=400)

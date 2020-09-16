@@ -1,3 +1,5 @@
+import { func } from "prop-types";
+
 function backendLookup(url,method,responseHandler){
 
     var xhr = new XMLHttpRequest();
@@ -34,5 +36,12 @@ export function productDetailView(responseHandler,slug=""){
 export function CartListView(responseHandler){
 
     backendLookup(`api/cart/list/`,"GET",responseHandler);
+
+}
+
+
+export function CartItemUpdateView(responseHandler,id=""){
+
+    backendLookup(`api/cart/update/?p_id=${id}`,"GET",responseHandler);
 
 }
